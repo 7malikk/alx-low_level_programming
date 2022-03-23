@@ -7,28 +7,19 @@
 * @n: number parameter
 *
 * Return - dest
-*
-* _strlen - returns the length of a string
-* @s: parameter
-*
-* Return: int
 */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int l = _strlen(dest);
+	int l;
 	int i = 0;
+	int len = 0;
+
+	while (dest[len] != '\0')
+	{
+		len++;
+	}
+	l = len;
 
 	while (i < n && src[i] != '\0')
 	{
